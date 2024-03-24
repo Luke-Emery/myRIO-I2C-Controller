@@ -1,8 +1,8 @@
 ![Banner image for Robotic Programming at Staffordshire University](/BB_Banner_RP_ULTRA@4x.png)
-# myRIO Square Wave Generator
-A Virtual Instrument (VI) which is to be deployed onto a National Instruments myRIO to generate a square wave. This wave can be used to simulate data from a wheel speed type sensor.
+# myRIO I2C Controller
+A Virtual Instrument (VI) which is to be deployed onto a National Instruments myRIO to act as an I2C Controller. This module can be considered as a data request within a network of integrated circuits to simulate data from a ride vehicle speed module.
 
-The VI contains a control panel which displays errors (unused in this version), and controls for the duty cycle (as a percentage of the pulse width) and wave frequency (in Hertz).
+The VI contains a control panel which displays an I2C error indicator (used to indicate various errors but commonly an air gap in the I2C wires or failure to acknowledge from the addressed Worker), and an indicator for the requested brake force.
 
 ## Using the Virtual Instrument
 Download/Fork the VI. Be sure to unzip the downloaded folder.
@@ -18,9 +18,9 @@ Before the following instructions, ensure that the myRIO is set up according to 
 - Expand the Target within the project by clicking the **[+]** icon
 - Right click the file named **"Main.vi"** that is within the Target and select **"Replace With"**
   - In the dialogue that opens, navigate to the downloaded VI from this repository
-  - Select **"SquareWave.vi"** and click **"OK"**
+  - Select **"I2C.vi"** and click **"OK"**
 - Save the Project (ctrl+S)
-- Double click **"SquareWave.vi"**
+- Double click **"I2C.vi"**
 - Once the VI has opened, click the **"Run"** arrow icon button at the top left of the application
 - Control the duty cycle and frequency with the labelled dials
 
